@@ -1,0 +1,66 @@
+.container {
+  background: blue;
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.parent {
+  background: black;
+  color: white;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  /* position: relative; */
+  animation: rotate 1s linear;
+}
+h2 {
+  animation: rotate 1s linear reverse;
+}
+.ball {
+  background: radial-gradient(white, red);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode;; */
+  animation: circle 1s 2 linear;
+}
+@keyframes circle {
+  0% {
+    left: 50px;
+    top: 50px;
+  }
+  25% {
+    left: 70vw;
+    top: 50px;
+  }
+  50% {
+    left: 70vw;
+    top: 70vh;
+  }
+  75% {
+    left: 50px;
+    top: 70vh;
+  }
+  100% {
+    left: 50px;
+    top: 50px;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
